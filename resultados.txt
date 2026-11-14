@@ -1,0 +1,58 @@
+=== 1. Reconstrução a partir da Tabela 2 (di Biase et al., 2019) ===
+defeitos_encontrados   A_emaranhada  distribuições compatíveis: 2
+    contagens por valor 0..: [0, 10, 2, 2]
+    contagens por valor 0..: [1, 7, 5, 1]
+defeitos_encontrados   B_decomposta  distribuições compatíveis: 3
+    contagens por valor 0..: [1, 11, 0, 2]
+    contagens por valor 0..: [2, 8, 3, 1]
+    contagens por valor 0..: [3, 5, 6]
+falsos_positivos       A_emaranhada  distribuições compatíveis: 1
+    contagens por valor 0..: [8, 6]
+falsos_positivos       B_decomposta  distribuições compatíveis: 1
+    contagens por valor 0..: [13, 1]
+
+=== 2. Hipótese principal: falsos positivos por revisor ===
+
+Descritiva: falsos positivos (contagem por revisor)
+              count  sum   mean    std  median  min  max
+A_emaranhada   14.0  6.0  0.429  0.514     0.0  0.0  1.0
+B_decomposta   14.0  1.0  0.071  0.267     0.0  0.0  1.0
+Valores distintos observados: [0, 1] -> empates maciços; pelo protocolo, a decisão usa o teste exato (alternativo)
+Conferência com a Tabela 2: média, DP, limite do 'IC', delta de Cliff e p-valor reproduzidos
+
+Mann-Whitney U (bilateral, aprox. normal c/ correção de empates): U = 133.0, p = 0.0347
+Teste exato (Fisher = permutação exata de U): OR = 9.75, p = 0.0768
+Conferência: permutação Monte Carlo de U (100000 reamostragens, semente 2026): p = 0.0786
+Delta de Cliff (A vs. B) = 0.357 (= diferença de proporções); IC95% Newcombe = [0.033; 0.610]
+A de Vargha-Delaney (A vs. B) = 0.679 (probabilidade de um revisor de A ter mais FP que um de B, empate vale 1/2)
+d de Cohen (A - B) = 0.872 (sp = 0.409)
+Decisão com alfa = 0.05 (teste exato): não rejeita H0
+Proporção com >=1 FP: 6/14 = 0.429; IC95% Wilson = [0.214; 0.674]
+Proporção com >=1 FP: 1/14 = 0.071; IC95% Wilson = [0.013; 0.315]
+Poder simulado do teste exato com n = 14 por grupo: 0.48
+Menor n por grupo com poder >= 0,80 (passo 1): 26
+
+=== 3. Hipótese secundária: defeitos encontrados (todas as reconstruções compatíveis) ===
+A_contagens_0a3 B_contagens_0a3     U      p  delta_cliff
+  [0, 10, 2, 2]   [1, 11, 0, 2] 115.0 0.3176        0.173
+  [0, 10, 2, 2]    [2, 8, 3, 1] 110.0 0.5357        0.122
+  [0, 10, 2, 2]    [3, 5, 6, 0] 105.0 0.7419        0.071
+   [1, 7, 5, 1]   [1, 11, 0, 2] 119.0 0.2696        0.214
+   [1, 7, 5, 1]    [2, 8, 3, 1] 114.0 0.4323        0.163
+   [1, 7, 5, 1]    [3, 5, 6, 0] 109.0 0.6026        0.112
+Faixa de p: [0.270; 0.742]; faixa de delta: [0.071; 0.214]
+
+=== 4. Exploratório: questionário pós-revisão Q1-Q12 (Likert 1-5) ===
+questao  mediana_A  mediana_B     U      p  delta_cliff_A_vs_B  p_holm
+     Q1        4.5        4.0 111.0 0.5358               0.133  1.0000
+     Q2        5.0        4.0 127.5 0.1510               0.301  1.0000
+     Q3        1.0        1.0 110.0 0.5400               0.122  1.0000
+     Q4        4.0        3.5 122.5 0.2554               0.250  1.0000
+     Q5        2.0        2.0  95.5 0.9210              -0.026  1.0000
+     Q6        4.0        4.0  95.0 0.8997              -0.031  1.0000
+     Q7        4.0        4.0 119.0 0.3255               0.214  1.0000
+     Q8        2.0        4.0  17.0 0.0001              -0.827  0.0013
+     Q9        3.0        2.0 110.0 0.5640               0.122  1.0000
+    Q10        2.0        4.0  50.0 0.0202              -0.490  0.2023
+    Q11        4.0        4.0  93.0 0.8022              -0.051  1.0000
+    Q12        4.0        2.0 158.0 0.0040               0.612  0.0440

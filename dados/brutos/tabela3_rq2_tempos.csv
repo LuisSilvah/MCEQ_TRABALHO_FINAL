@@ -1,0 +1,7 @@
+medida,grupo,n,mediana_s,media_s,dp_s,ic95_inf_s,ic95_sup_s,p_valor_original
+tempo_liquido_revisao,A_emaranhada,14,831,853,385,99,1607,0.66
+tempo_liquido_revisao,B_decomposta,14,759,802,337,140,1463,0.66
+vida_1o_defeito,A_emaranhada,11,304,349,174,8,691,0.79
+vida_1o_defeito,B_decomposta,11,297,301,109,86,516,0.79
+vida_2o_defeito,A_emaranhada,6,222,263,149,0,555,0.17
+vida_2o_defeito,B_decomposta,6,375,388,122,148,657,0.17

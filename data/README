@@ -1,0 +1,31 @@
+Online appendix for "The effects of change-decompositionon on code review - A Controlled Experiment"
+submitted to the 12th International Symposium on Empirical Software Engineering 
+and Measurement (ESEM '18), October 11-12, 2018, Oulu, Finland. 
+
+Marco di Biase (m.dibiase@sig.eu), Magiel Bruntink (m.bruntink@sig.eu), 
+Arie van Deursen (Arie.VanDeursen@tudelft.nl), Alberto Bacchelli (bacchelli@ifi.uzh.ch)
+
+Source Code used in the Experiment is in folder `source_code_with_patches`.
+File `jpacman.zip` contains the system; code that subject had to review is  
+contained in folders `control` and `treatment` based on the group they belong
+to.
+
+Instructions provided to subjects are contained in file
+`Instructions_for_the_experiment.pdf`.
+
+Folder `Forms` contains the various forms used in the experiment.
+Characterization of subjects was made using `Form_1-General_questions.pdf`.
+Knowledge on the system was asked using `Form_2-Task_and_knowledge_questions.pdf`.
+Review questions were asked using `Form_3-Review_questions`.
+
+File `Other_suggested_improvements_in_reviews.xlsx` contains the comments made
+by subjects that are presented in the paper as suggested improvements, and
+their classification.
+
+Replication environment is provided as a VirtualBox image, contained in folder
+`virtual_machine`. Tested with VirtualBox v5.2.10.
+
+LICENSES:
+`jpacman.zip` is licensed under the Apache License 2.0 (https://www.apache.org/licenses/LICENSE-2.0).
+Content of folder `virtual_machine` is licensed under the Ubuntu license (https://www.ubuntu.com/licensing).
+All the other data is licensed under the CC-BY 4.0 license (https://creativecommons.org/licenses/by/4.0/).

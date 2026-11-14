@@ -1,0 +1,7 @@
+variavel,grupo,n,total,mediana,media,dp,ic95_inf,ic95_sup,p_valor_original
+defeitos_encontrados,A_emaranhada,14,20,1.0,1.42,0.72,0,2.85,0.6
+defeitos_encontrados,B_decomposta,14,17,1.0,1.21,0.77,0,2.72,0.6
+falsos_positivos,A_emaranhada,14,6,0,0.42,0.5,0,1.40,0.03
+falsos_positivos,B_decomposta,14,1,0,0.07,0.25,0,0.57,0.03
+sugestoes_melhoria,A_emaranhada,14,7,0,0.5,0.62,0,1.22,0.4
+sugestoes_melhoria,B_decomposta,14,19,1.0,1.36,1.84,0,5.03,0.4
